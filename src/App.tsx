@@ -4,6 +4,9 @@ import { IonReactRouter } from "@ionic/react-router";
 import LogInPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
 import SessionPage from "./pages/SessionPage";
+import ProgramSettingsPage from "./pages/ProgramSettingsPage";
+import SessionSettingsPage from "./pages/SessionSettingsPage";
+
 import "@ionic/react/css/core.css";
 import "@ionic/react/css/palettes/dark.system.css";
 
@@ -25,6 +28,16 @@ const App = () => (
             <Route exact path="/" component={LogInPage} />
             <Route exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/session" component={SessionPage} />
+            <Route
+              exact
+              path="/sessionSetting"
+              component={SessionSettingsPage}
+            />
+            <Route
+              exact
+              path="/programSetting"
+              component={ProgramSettingsPage}
+            />
           </TargetProvider>
         </UserProvider>
       </IonRouterOutlet>
